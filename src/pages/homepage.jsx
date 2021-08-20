@@ -13,6 +13,7 @@ class HomePage extends Component {
 					<Header onLogin={(route) => this.props.history.push(route)} />
 					<AboutUs />
 				</div>
+				<Footer className="footer" />
 			</div>
 		)
 	}
