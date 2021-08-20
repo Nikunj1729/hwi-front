@@ -5,7 +5,6 @@
 	color: white;
 	display: flex;
 	justify-content: flex-end;
-	
 }
  
 .login-btn{
@@ -13,34 +12,30 @@
 	border-radius: 5px;
     background: rgba(110, 30, 110,0.9);
 	*/
-	margin-right: 3px;
+	font-size: 18px;
+	margin-right: 10px;
 	margin-bottom: 2px;
-	padding: 8px 10px;
+	padding: 8px 16px;
 	border-radius: 0 0 6px 6px;
-	padding-top: 50px;
+	padding-top: 40px;
 	text-align: center;
-
+	background: rgba(250, 20, 180,0.5);
 }
 .login-btn:hover{
 	cursor: pointer;
 	background: rgba(50, 20, 80,0.9);
-	
 }
 #company img {
     position: absolute;
     top: 0px;
-	left: 500px;
+	left: 0px;
 	width: 90px;
 	height: auto;
 	border-radius: 10px;
 	max-width: 100%;
 	bottom: 15%;
-  position: absolute;
-  animation: linear ;
-  animation-name: run;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;  
-
+  	position: absolute;
+  	animation: linear ;
 }
 
 @keyframes run {
