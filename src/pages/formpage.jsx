@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Switch,Redirect,Route,Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import $ from 'jquery';
 import Login from '../components/login-form/form.jsx';
 

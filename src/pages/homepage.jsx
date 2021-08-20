@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './homepage.css';
 import Header from './../components/homepage-header/header.jsx';
-import SimpleCard from './../components/homepage-card/homepage-card';
+//import SimpleCard from './../components/homepage-card/homepage-card';
 import AboutUs from "./../components/aboutus/aboutus";
 import Footer from './../components/footer/footer.js';
 
