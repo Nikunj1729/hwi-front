@@ -36,7 +36,6 @@ function Aboutus() {
           <div className="col-lg-6 pt-4 pt-lg-0">
             <p>
               In an effort to bring back the joy of shopping, this WebApp makes an effort to cover every aspect of the apparel shopping experience to ensure that the customers get the best fitment and are able to visualize themselves in the apparel to make the right choices.  This will also reduce returns and provide a personalized online shopping experience.
-
             </p>
             <ul>
               <li><i className="ri-check-double-line"></i> Scan your image</li>
