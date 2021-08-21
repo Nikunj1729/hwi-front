@@ -30,7 +30,7 @@ class FormPage extends Component{
             if(!name||!email||!password)
                 alert('please enter all fields');
             else{
-                $.post('https://hwi-back.herokuapp.com/user/signup',{name:name,email:email,password:password},async(data)=>{
+                $.post('https://hwi-backend.herokuapp.com/user/signup',{name:name,email:email,password:password},async(data)=>{
                     if(data.status==="success"){
                         await alert('Signed in successfully');
                         await localStorage.setItem('token',data.token);

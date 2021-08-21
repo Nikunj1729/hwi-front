@@ -26,7 +26,7 @@ class FormPage extends Component{
             });
         }
 
-        $.post('https://hwi-back.herokuapp.com/user/getuser',{token:token},(data)=>{
+        $.post('https://hwi-backend.herokuapp.com/user/getuser',{token:token},(data)=>{
             if(data.status==="success"){
                 this.setState({
                     user: data.user
@@ -51,7 +51,7 @@ class FormPage extends Component{
             if(!email||!password)
                 alert('please enter email and password both');
             else{
-                $.post('https://hwi-back.herokuapp.com/user/login',{email:email,password:password},async(data)=>{
+                $.post('https://hwi-backend.herokuapp.com/user/login',{email:email,password:password},async(data)=>{
                     if(data.status==="success"){
                         await alert('Logged in successfully');
                         await localStorage.setItem('token',data.token);
