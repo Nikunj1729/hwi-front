@@ -10,7 +10,7 @@ class HomePage extends Component {
 		return (
 			<div>
 				<div className="content-main">
-					<Header onLogin={(route) => this.props.history.push(route)} />
+					<Header onEnterDashboard={(route) => this.props.history.push(route)} />
 					<AboutUs />
 				</div>
 				<Footer className="footer" />

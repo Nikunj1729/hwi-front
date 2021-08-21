@@ -3,7 +3,7 @@ import './header.css';
 import victory_image from '../../assets/images/slider-icon.png';
 import kid from '../../assets/images/kid.png';
 
-const header = ({ onLogin }) => {
+const header = ({onEnterDashboard}) => {
     return (
         <div className="header-banner">
             <header className="header-main">
@@ -11,7 +11,8 @@ const header = ({ onLogin }) => {
                     <img src={kid} className="homepage-logo" alt="kid" style={{background:"transparent",height:"150px",width:"auto"}}/>
                 </div>
                 <nav className="header-nav">
-                    <div onClick={() => onLogin('/login')} className="login-btn">Login</div>
+                    <div onClick={() => onEnterDashboard('/login')} className="login-btn">Login</div>
+                    <div onClick={() => onEnterDashboard('/signin')} className="login-btn">Signin</div>
                 </nav>
             </header>
             <div id="welcome">
