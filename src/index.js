@@ -4,6 +4,13 @@ import {BrowserRouter} from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import "./vendor/bootstrap/css/bootstrap.min.css";
+import "./vendor/icofont/icofont.min.css";
+import "./vendor/boxicons/css/boxicons.min.css";
+import "./vendor/animate.css/animate.min.css";
+import "./vendor/remixicon/remixicon.css";
+import "./vendor/venobox/venobox.css";
+import "./vendor/owl.carousel/assets/owl.carousel.min.css";
 
 ReactDOM.render(
     <BrowserRouter>
