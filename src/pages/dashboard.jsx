@@ -1,12 +1,15 @@
 import React,{Component} from 'react';
+import $ from 'jquery';
 
 import './dashboard.css';
 
 import blog1 from "../assets/images/blog-1.jpg";
 import img_test from "../assets/images/portfolio/portfolio-7.jpg";
 
+
 class DashBoard extends Component{
-  render(){
+	
+ 	render(){
     return(
     	<div>
       		<header id="header" className="fixed-top header-inner-pages">
@@ -36,34 +39,23 @@ class DashBoard extends Component{
 
 			        <div className="row">
 
-			          <div className="col-lg-5 entries justify-content-center">
-
+		          	<div className="col-lg-5 entries justify-content-center">
 			            <article className="entry entry-single">
-
-			              <div className="entry-img">
-			                <img src={blog1} alt="" className="img-fluid"/>
-			              </div>
-
-			              <h2 className="entry-title">
-			                <a href="blog-single.html">Upload your Image</a>
-			              </h2>
-
-			            </article>
-
-			          </div>
+			              	<img id="man_standing" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/06d4d763-9fb0-4ffb-a5af-3e7d2008c376/d5esgum-ebf9a6ad-b2df-47ba-b4fa-43ecd0d77d5e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzA2ZDRkNzYzLTlmYjAtNGZmYi1hNWFmLTNlN2QyMDA4YzM3NlwvZDVlc2d1bS1lYmY5YTZhZC1iMmRmLTQ3YmEtYjRmYS00M2VjZDBkNzdkNWUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.OzIwXQc2aRvsr0jkvWTm5FlQz3D33TQCXlnXB-_rB1Y" alt="" crossOrigin='anonymous' height="500"/>        
+			                <h2 className="entry-title" href="blog-single.html">Upload your Image</h2>
+			        	</article>
+			        </div>
 
 
 			          <div className="col-lg-7">
 
 			            <div className="sidebar">
-
 			              <h3 className="sidebar-title">Enter your height (in cms)</h3>
 			              <div className="sidebar-item search-form">
 			                <form action="">
 			                  <input type="text" placeholder="Get Body Measurements"/>
 			                  <button type="submit"><i className="icofont-search"></i></button>
 			                </form>
-
 			              </div>
 
 			              <h3 className="sidebar-title">Your Body Measurements are</h3>
@@ -217,3 +209,27 @@ class DashBoard extends Component{
 }
 
 export default DashBoard;
+
+/*
+
+constructor(props){
+        super(props);
+        this.state={
+          img: ""
+        }
+    }
+    readURL=(e)=>{
+    	console.log(e.target.value);
+	    this.setState({
+	    	img: e.target.value
+	    })
+	}
+
+
+<div className="entry-img">
+{this.state.img!=""?<img id="input-image-person" src={this.state.img} alt="your image" />:<p></p>}
+</div>
+
+	<input type='file' onChange={(e)=>this.readURL(e)} />
+	
+	*/
