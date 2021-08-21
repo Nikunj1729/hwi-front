@@ -11,7 +11,8 @@ class FormPage extends Component{
     constructor(props){
         super(props);
         this.state={
-          username:'',
+          user:'',
+          name: '',
           email:'',
           password:''
         }
@@ -21,29 +22,20 @@ class FormPage extends Component{
         const {value,name} = e.target;
         this.setState({[name]: value})
     }
-    componentDidMount(){
-        this.setState({
-            user:'',
-            email:'',
-            password:''
-        })
-    }
     handlesubmit=async(e)=>{
         try{
-            const user = await this.state.user;
+            const name = await this.state.name;
             const email = await this.state.email;
             const password = await this.state.password;
-            if(!user||!email||!password)
+            if(!name||!email||!password)
                 alert('please enter all fields');
             else{
-                $.post('https://hwi-back.herokuapp.com/user/signup',{name:user,email:email,password:password},async(data)=>{
+                $.post('https://hwi-back.herokuapp.com/user/signup',{name:name,email:email,password:password},async(data)=>{
                     if(data.status==="success"){
                         await alert('Signed in successfully');
                         await localStorage.setItem('token',data.token);
                         this.setState({
-                            user: '',
-                            email: '',
-                            password: ''
+                            user: data.user
                         });
                     }
                     else{alert('Enter correct email or password');}
@@ -57,7 +49,6 @@ class FormPage extends Component{
     }
 
     render(){
-        console.log(this.state.user);
         return(
             <div>
             {
@@ -65,10 +56,10 @@ class FormPage extends Component{
                 ?
                 <div className="form-page">
                     <Link className="login-home-btn" to="/">&#8656; Go to Home</Link>
-                    <Signin handlesubmit={this.handlesubmit} handlechange={this.handlechange} user={this.state.user} email={this.state.email} password={this.state.password}/>            
+                    <Signin handlesubmit={this.handlesubmit} handlechange={this.handlechange} name={this.state.name} email={this.state.email} password={this.state.password}/>            
                 </div>
                 :
-                <DashBoard type={"student"} user={this.state.user}/>
+                <DashBoard user={this.state.user}/>
             }
             </div>
         )

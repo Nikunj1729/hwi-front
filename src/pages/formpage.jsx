@@ -29,7 +29,7 @@ class FormPage extends Component{
         $.post('https://hwi-back.herokuapp.com/user/getuser',{token:token},(data)=>{
             if(data.status==="success"){
                 this.setState({
-                    user: data.message
+                    user: data.user
                 });
             }
             else{
@@ -55,10 +55,8 @@ class FormPage extends Component{
                     if(data.status==="success"){
                         await alert('Logged in successfully');
                         await localStorage.setItem('token',data.token);
-                        await localStorage.setItem('type','teacher');
                         this.setState({
-                            email: '',
-                            password: ''
+                            user: data.user
                         });
                     }
                     else{alert('Enter correct email or password');}
@@ -72,6 +70,7 @@ class FormPage extends Component{
     }
 
     render(){
+        console.log(this.state.user);
         return(
             <div>
             {
