@@ -8,7 +8,7 @@ function Footer() {
 	return (
 		<div className="homepage-footer" id="homepage-footer">
 			<div className="footer2">
-				<p className="ff4">Copyright &copy; 2020 Team LoremIpsum3.0</p>
+				<p className="ff4">Copyright &copy; 2020 Team GIT_IGNORE_DEVS</p>
 				<div className="contactus-footer">
 					<p className="ff4">Contact Us</p>
 					<p className="ff4">loremipsum@easymonitor.ac.in</p>
