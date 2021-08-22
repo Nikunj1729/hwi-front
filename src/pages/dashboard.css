@@ -1,0 +1,39 @@
+@keyframes fadeInUp {
+	from {
+	  opacity: 0;
+	  -webkit-transform: translate3d(0, 100%, 0);
+	  transform: translate3d(0, 100%, 0);
+	}
+  
+	to {
+	  opacity: 1;
+	  -webkit-transform: translate3d(0, 0, 0);
+	  transform: translate3d(0, 0, 0);
+	}
+  }
+
+
+.logout-btn{
+	/*border: 1px solid black;
+	border-radius: 5px;
+    background: rgba(110, 30, 110,0.9);
+	*/
+	position: absolute;
+	top: 0;
+	right: 100px;
+	font-size: 18px;
+	margin-right: 10px;
+	margin-bottom: 2px;
+	padding: 8px 16px;
+	border-radius: 0 0 6px 6px;
+	text-align: center;
+	color: rgba(255,255,255);
+	background: #d9232d;
+	animation-delay: 0.8s;
+	animation-name: fadeInUp;
+}
+.logout-btn:hover{
+	cursor: pointer;
+	color: rgba(255,255,255);
+	background: #df3740;
+}

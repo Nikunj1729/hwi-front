@@ -2,37 +2,40 @@ import React from 'react';
 import './header.css';
 import victory_image from '../../assets/images/slider-icon.png';
 import kid from '../../assets/images/kid.png';
+import BGImage from "../../assets/images/gid.png";
 
-const header = ({onEnterDashboard}) => {
+const header = ({ onEnterDashboard }) => {
     return (
-<div>
-    <header id="header" className="fixed-top ">
-        <div className="container d-flex align-items-center">
-            <h1 className="logo"><a href="index.html">GIT_IGNORE_DEVS</a></h1>
-            <nav>
-                <div onClick={() => onEnterDashboard('/login')} className="login-btn1">Login</div>
-                <div onClick={() => onEnterDashboard('/signin')} className="login-btn2">Signin</div>
-            </nav>
-        </div>
-    </header>
-    <section id="hero">
-        <div id="heroCarousel" className="carousel slide carousel-fade" data-ride="carousel">
-            <ol className="carousel-indicators" id="hero-carousel-indicators"></ol>
-            <div className="carousel-inner" role="listbox">
-                <div className="carousel-item active" style={{backgroundImage: "url(../../assets/images/gid.png)"}}>
-                    <div className="carousel-container">
-                        <div className="container">
-                            <h2 className="animate__animated animate__fadeInDown">Welcome to <span>Virtual Stylist</span></h2>
-                            <p className="animate__animated animate__fadeInUp"> We at virtual stylist help you to form get your body measurements.
-                            We will also fetch out our best collection according to your age, size and gender. Hope you like it!!</p>
-                            <a href="login.html" className="btn-get-started animate__animated animate__fadeInUp scrollto">Login</a>
+        <div>
+            <header id="header" className="fixed-top ">
+                <div className="container d-flex align-items-center">
+                    <h1 className="logo"><a href="index.html">GIT_IGNORE_DEVS</a></h1>
+                    <nav>
+                        <div onClick={() => onEnterDashboard('/login')} className="login-btn1">Login</div>
+                        <div onClick={() => onEnterDashboard('/signin')} className="login-btn2">Signin</div>
+                    </nav>
+                </div>
+            </header>
+            <section id="hero">
+                <div id="heroCarousel" className="carousel slide carousel-fade" data-ride="carousel">
+                    <ol className="carousel-indicators" id="hero-carousel-indicators"></ol>
+                    <div className="carousel-inner" role="listbox">
+                        <div className="carousel-item active" style={{
+                            backgroundImage: `url(${BGImage})`, backgroundSize: 'cover'
+                        }}>
+                            <div className="carousel-container">
+                                <div className="container">
+                                    <h2 className="animate__animated animate__fadeInDown">Welcome to <span>Virtual Stylist</span></h2>
+                                    <p className="animate__animated animate__fadeInUp"> We at virtual stylist help you to form get your body measurements.
+                                        We will also fetch out our best collection according to your age, size and gender. Hope you like it!!</p>
+                                    <a href="javascript:void(0)" onClick={() => onEnterDashboard('/login')} className="btn-get-started animate__animated animate__fadeInUp scrollto">Login</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
-    </section>
-</div>
     );
 }
 export default header;
